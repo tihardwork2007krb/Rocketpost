@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rocket Post - Offline Chat & Private Messaging</title>
+
+    <meta name="description" content="Rocket Post is a simple offline chat and private messaging app for connecting, sharing and chatting without internet access.">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://rocketpostoffline.netlify.app/">
+
+    <meta property="og:title" content="Rocket Post - Offline Chat & Private Messaging">
+
+    <meta property="og:description" content="Connect, share and chat privately with Rocket Post. A simple offline communication project.">
+
+    <meta property="og:type" content="website">
+
+    <meta property="og:url" content="https://rocketpostoffline.netlify.app/">
+
+    <meta name="twitter:card" content="summary">
+
+    <meta name="twitter:title" content="Rocket Post - Offline Chat & Private Messaging">
+
+    <meta name="twitter:description" content="Connect, share and chat privately with Rocket Post.">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="./manifest.json">
+<meta name="theme-color" content="#1877f2">
+</head>
+<body>
+
+<header class="top-header">
+
+    <h1>🚀 Rocket Post</h1>
+
+    <p>Connect • Share • Chat</p>
+
+    <div class="user-selector">
+
+        <label for="currentUser">
+            Current User:
+        </label>
+
+        <select id="currentUser">
+
+            <option value="You">You</option>
+            <option value="Friend">Friend</option>
+            <option value="Alex">Alex</option>
+            <option value="Sam">Sam</option>
+            <option value="john">john</option>
+
+        </select>
+
+    </div>
+
+    <button id="aboutButton">
+        About Us
+    </button>
+
+</header>
+
+<main>
+
+<section class="seo-content">
+    <h2>Rocket Post - Offline Chat and Private Messaging</h2>
+
+    <p>
+        Rocket Post is a simple offline messaging project designed for private
+        communication. Connect, share and chat with a simple and easy-to-use interface.
+    </p>
+
+    <p>
+        Rocket Post is designed with privacy and simple communication in mind.
+        The current version stores chat information locally in the browser,
+        making it useful for offline chat testing and personal communication.
+    </p>
+
+    <p>
+        Bluetooth-based device-to-device messaging is planned as a future
+        feature for compatible mobile devices.
+    </p>
+</section>
+</main>
+
+<!-- ABOUT US -->
+
+<div
+    id="aboutModal"
+    class="modal"
+>
+
+    <div class="modal-content">
+
+        <button
+            id="closeAbout"
+            class="close-button"
+        >
+            &times;
+        </button>
+
+
+        <h2>
+            About Rocket Post
+        </h2>
+
+
+        <p>
+            Rocket Post is a simple offline
+            communication project designed
+            to connect, share and chat.
+        </p>
+
+
+        <p>
+            It focuses on simple, private,
+            offline communication.
+        </p>
+
+
+        <p>
+            Users can create conversations,
+            send messages and keep their chat
+            history stored locally on their device.
+        </p>
+
+
+        <p class="about-footer">
+            🚀 Connect • Share • Chat — Offline
+        </p>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+<script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker
+        .register("./service-worker.js")
+        .catch((error) => {
+          console.error("Service worker registration failed:", error);
+        });
+    });
+  }
+</script>
+
+</body>
+
+</html>

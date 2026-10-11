@@ -1,0 +1,583 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
+    color: #222;
+}
+
+
+/* ==============================
+   TOP HEADER
+============================== */
+
+.top-header {
+    background: #1877f2;
+    color: white;
+    text-align: center;
+    padding: 18px;
+}
+
+.top-header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.top-header p {
+    margin: 6px 0 0;
+}
+
+
+/* ==============================
+   USER SELECTOR
+============================== */
+
+.user-selector {
+    margin-top: 12px;
+}
+
+.user-selector label {
+    font-size: 14px;
+    margin-right: 6px;
+}
+
+#currentUser {
+    padding: 7px 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+/* ==============================
+   ABOUT BUTTON
+============================== */
+
+#aboutButton {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: white;
+    color: #1877f2;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#aboutButton:hover {
+    background: #e8f1ff;
+}
+
+
+/* ==============================
+   MESSENGER
+============================== */
+
+.messenger {
+    display: flex;
+    width: 95%;
+    max-width: 1100px;
+    height: 650px;
+    margin: 25px auto;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ==============================
+   CONTACTS
+============================== */
+
+.contacts {
+    width: 320px;
+    border-right: 1px solid #ddd;
+    background: #f8f9fb;
+    overflow-y: auto;
+}
+
+.contacts-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.contacts-header h2 {
+    margin: 0;
+}
+
+.contacts-header button {
+    border: none;
+    background: #1877f2;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.contacts-header button:hover {
+    background: #0d65d9;
+}
+
+
+/* ==============================
+   SEARCH
+============================== */
+
+#searchContact {
+    width: 90%;
+    margin: 0 5% 15px;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+}
+
+
+/* ==============================
+   CONTACT
+============================== */
+
+.contact {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 55px 12px 14px;
+
+    min-height: 68px;
+
+    cursor: pointer;
+}
+
+.contact:hover {
+    background: #e8eef8;
+}
+
+.contact.active {
+    background: #dbe9ff;
+}
+
+
+/* ==============================
+   AVATAR
+============================== */
+
+.avatar {
+    width: 45px;
+    height: 45px;
+
+    min-width: 45px;
+
+    border-radius: 50%;
+
+    background: #1877f2;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+/* ==============================
+   CONTACT INFORMATION
+============================== */
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+}
+
+.contact-info strong {
+    white-space: nowrap;
+}
+
+.contact-info span {
+    color: #777;
+    font-size: 13px;
+    margin-top: 4px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* ==============================
+   DELETE CONTACT BUTTON
+============================== */
+
+.delete-contact {
+    position: absolute;
+
+    right: 10px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 34px;
+    height: 34px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #ff4d4d;
+    color: white;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 16px;
+
+    z-index: 100;
+}
+
+.delete-contact:hover {
+    background: #d93636;
+    transform: translateY(-50%) scale(1.08);
+}
+
+
+/* ==============================
+   CHAT
+============================== */
+
+.chat {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ==============================
+   CHAT HEADER
+============================== */
+
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px;
+
+    background: #f5f7fa;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.chat-user {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.chat-header h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+
+/* ==============================
+   CLEAR CHAT
+============================== */
+
+#clearChatButton {
+    padding: 8px 14px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #ff4d4d;
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+#clearChatButton:hover {
+    background: #d93636;
+}
+
+
+/* ==============================
+   MESSAGES
+============================== */
+
+.messages {
+    flex: 1;
+
+    padding: 20px;
+
+    overflow-y: auto;
+
+    background: #f5f7fb;
+}
+
+.message {
+    max-width: 70%;
+
+    padding: 10px 14px;
+
+    margin-bottom: 12px;
+
+    border-radius: 15px;
+}
+
+.message-text {
+    font-size: 15px;
+}
+
+.message small {
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: 10px;
+
+    opacity: 0.6;
+}
+
+
+/* RECEIVED */
+
+.received {
+    background: white;
+
+    border: 1px solid #ddd;
+
+    margin-right: auto;
+}
+
+
+/* SENT */
+
+.sent {
+    background: #1877f2;
+
+    color: white;
+
+    margin-left: auto;
+}
+
+
+/* ==============================
+   MESSAGE INPUT
+============================== */
+
+.message-input {
+    display: flex;
+
+    gap: 10px;
+
+    padding: 15px;
+
+    border-top: 1px solid #ddd;
+
+    background: white;
+}
+
+#messageInput {
+    flex: 1;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 25px;
+
+    outline: none;
+}
+
+#sendButton {
+    border: none;
+
+    background: #1877f2;
+
+    color: white;
+
+    padding: 0 20px;
+
+    border-radius: 25px;
+
+    cursor: pointer;
+}
+
+#sendButton:hover {
+    background: #0d65d9;
+}
+
+
+/* ==============================
+   ABOUT MODAL
+============================== */
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.6);
+
+    z-index: 9999;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    position: relative;
+
+    width: 90%;
+
+    max-width: 500px;
+
+    padding: 30px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+}
+
+.modal-content h2 {
+    margin-top: 0;
+
+    color: #1877f2;
+}
+
+.modal-content p {
+    line-height: 1.6;
+
+    color: #444;
+}
+
+
+/* ==============================
+   CLOSE BUTTON
+============================== */
+
+.close-button {
+    position: absolute;
+
+    right: 15px;
+    top: 10px;
+
+    border: none;
+
+    background: none;
+
+    font-size: 30px;
+
+    color: #777;
+
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: #000;
+}
+
+.about-footer {
+    text-align: center;
+
+    font-weight: bold;
+
+    color: #1877f2 !important;
+}
+
+
+/* ==============================
+   MOBILE
+============================== */
+
+@media (max-width: 700px) {
+
+    .messenger {
+        width: 100%;
+
+        height: calc(100vh - 100px);
+
+        margin: 0;
+
+        border-radius: 0;
+    }
+
+    .contacts {
+        width: 95px;
+    }
+
+    .contacts-header h2,
+    #searchContact,
+    .contact-info {
+        display: none;
+    }
+
+    .contacts-header {
+        justify-content: center;
+    }
+
+    .contact {
+        justify-content: center;
+
+        padding: 12px 35px;
+    }
+
+    .delete-contact {
+        right: 2px;
+
+        width: 28px;
+        height: 28px;
+
+        font-size: 13px;
+    }
+
+    .chat {
+        width: calc(100% - 95px);
+    }
+
+    .message {
+        max-width: 85%;
+    }
+}
+
+.seo-content {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 12px;
+    line-height: 1.7;
+}
+
+.seo-content h2 {
+    margin-bottom: 12px;
+}
+
+.seo-content p {
+    margin-bottom: 12px;
+}
