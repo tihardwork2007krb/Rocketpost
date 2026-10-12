@@ -1179,3 +1179,29 @@ if (currentContact) {
 renderContacts();
 
 displayMessages();
+
+/* ========================================
+   ROCKET POST OFFLINE SUPPORT
+======================================== */
+
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", async () => {
+        try {
+            const registration =
+                await navigator.serviceWorker.register(
+                    "./service-worker.js"
+                );
+
+            console.log(
+                "Rocket Post service worker registered:",
+                registration.scope
+            );
+        } catch (error) {
+            console.error(
+                "Rocket Post service worker registration failed:",
+                error
+            );
+        }
+    });
+}
+
